@@ -22,6 +22,7 @@ body{
   margin: 0 auto;
   padding-top: 50px;
   width: 428px;
+  text-align: center;
 }
 
 .title{
@@ -30,12 +31,28 @@ body{
 }
 
 input{
-  border: 1px solid #FFFFFF;
+  border: 2px solid #FFFFFF;
   border-radius: 5px;
   background: transparent;
   color: #FFFFFF;
-  width: 200px;
+  width: 50%;
   font-size: 14px;
   padding: 5px;
+}
+input:focus{
+  box-shadow: 0px 2px 10px rgba(228,183,142,1);
+  outline: none;
+  border: 2px solid #FFFFFF;
+}
+.zipInput{
   margin: 35px auto;
+}
+::placeholder{
+  color: #FFFFFF;
+}
+.btnSubmit{
+  display: block;
+  width: 100px;
+  cursor: pointer;
+  margin: 0 auto;
 }
