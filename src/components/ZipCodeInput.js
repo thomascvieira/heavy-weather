@@ -2,8 +2,7 @@ import { useState } from 'react'
 
 const ZipCodeInput = ({onAdd}) => {
     const [zipCode, setZipCode] = useState('');
-    const [toggleInput, setToggleInput] = useState(false);
-
+    
     const onSubmit = (e) => {
         e.preventDefault()
         if (!zipCode) {
@@ -12,12 +11,6 @@ const ZipCodeInput = ({onAdd}) => {
         }
         onAdd(zipCode)
         setZipCode('')
-        toggle(toggleInput)
-        // fetchZipCode(zipCode)
-    }
-
-    const toggle = (toggleInput) => {
-        return setToggleInput(!toggleInput)
     }
 
     return (
