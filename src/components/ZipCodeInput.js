@@ -1,7 +1,8 @@
 import { useState } from 'react'
 
-const AddZipCode = ({onAdd}) => {
+const ZipCodeInput = ({onAdd}) => {
     const [zipCode, setZipCode] = useState('');
+    const [toggleInput, setToggleInput] = useState(false);
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -11,14 +12,12 @@ const AddZipCode = ({onAdd}) => {
         }
         onAdd(zipCode)
         setZipCode('')
-        fetchZipCode(zipCode)
+        toggle(toggleInput)
+        // fetchZipCode(zipCode)
     }
 
-    const fetchZipCode = async (zipCode) => {
-        const res = await fetch('https://api.zippopotam.us/us/'+zipCode)
-        const data = await res.json()
-        console.log(data)
-        return data
+    const toggle = (toggleInput) => {
+        return setToggleInput(!toggleInput)
     }
 
     return (
@@ -37,4 +36,4 @@ const AddZipCode = ({onAdd}) => {
     )
 }
 
-export default AddZipCode
+export default ZipCodeInput

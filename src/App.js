@@ -1,18 +1,21 @@
 import { useState, useEffect } from 'react'
 import Header from "./components/Header";
-import AddZipCode from "./components/AddZipCode";
+import ZipCodeInput from "./components/ZipCodeInput";
 
 const App = () => {
 
-  const addZipCode = (zipCode) => {
-    console.log(zipCode)
+  const addZipCode = async (zipCode) => {
+    const res = await fetch('https://api.zippopotam.us/us/'+zipCode)
+    const data = await res.json()
+    console.log(data)
+    return data
   }
 
   return (
     <div className="background">
       <div className="container">
         <Header />
-        <AddZipCode onAdd={addZipCode} />
+        <ZipCodeInput onAdd={addZipCode} />
       </div>
     </div>
   );
