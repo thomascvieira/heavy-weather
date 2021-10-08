@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
-const ZipCodeInput = ({onAdd}) => {
+const ZipCodeInput = ({ onAdd }) => {
     const [zipCode, setZipCode] = useState('');
-    
+
     const onSubmit = (e) => {
         e.preventDefault()
         if (!zipCode) {
