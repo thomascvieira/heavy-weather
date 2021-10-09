@@ -1,19 +1,11 @@
-
-const Header = ({toggleInput, zipCode}) => {
-  if(!toggleInput){
-    return (
-      <header>
-        <h1 className="title">Heavy Weather</h1>
-      </header>
-    )
-  }
-  else{
-    return (
-      <header>
-        <h1 className="title">Weather for {zipCode}</h1>
-      </header>
-    )
-  }
+const Header = ({ toggleInput, locationData }) => {
+  let title = ''
+  toggleInput ? title = 'Weather for ' + locationData[0] : title = 'Heavy Weather'
+  return (
+    <header>
+      <h1 className="header">{title}</h1>
+    </header>
+  )
 }
 
 export default Header
