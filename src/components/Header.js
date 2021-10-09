@@ -1,6 +1,6 @@
-const Header = ({ toggleInput }) => {
+const Header = ({ toggleInput, locationData }) => {
   let title = ''
-  toggleInput ? title = 'Weather for (location)' : title = 'Heavy Weather'
+  toggleInput ? title = 'Weather for ' + locationData[0] : title = 'Heavy Weather'
   return (
     <header>
       <h1 className="header">{title}</h1>
