@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './css/index.css';
+import './css/weather-icons.css'
+import './css/weather-icons.min.css'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
