@@ -10,7 +10,9 @@ const CurrentWeather = ({weatherData}) => {
         )
     } else{
         return (
-            <div className="lds-default spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            <div className='currentWeather'>
+                <h3>Loading...</h3>
+            </div>
         )
     }
 
