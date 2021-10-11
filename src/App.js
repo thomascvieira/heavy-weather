@@ -6,7 +6,7 @@ import CurrentWeather from './components/CurrentWeather';
 const App = () => {
   const [locationData, setLocationData] = useState([])
   const [toggleInput, setToggleInput] = useState(false)
-  const [weatherData, setWeatherData] = useState([])
+  const [weatherData, setWeatherData] = useState([0])
 
   const addZipCode = async (zipCode) => {
     const res = await fetch('https://api.zippopotam.us/us/' + zipCode)
@@ -43,7 +43,7 @@ const App = () => {
             toggleInput={toggleInput}
           />
         }
-        {toggleInput &&
+        {toggleInput&&
           <CurrentWeather 
             weatherData={weatherData}
           />
