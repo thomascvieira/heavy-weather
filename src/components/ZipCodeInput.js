@@ -18,12 +18,12 @@ const ZipCodeInput = ({ onAdd }) => {
             <form className='zip-form' onSubmit={onSubmit}>
                 <input
                     type='text'
-                    className='zipInput'
+                    className='zip-input'
                     placeholder="Enter ZIP code (ex 90210)"
                     value={zipCode}
                     onChange={(e) => setZipCode(e.target.value)}>
                 </input>
-                <input type='submit' value='Submit' className='btnSubmit'></input>
+                <input type='submit' value='Submit' className='btn-submit'></input>
             </form>
         </div>
     )
