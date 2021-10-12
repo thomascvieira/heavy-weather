@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import ZipCodeInput from "./components/ZipCodeInput";
 import CurrentWeather from './components/CurrentWeather';
 import ForecastToggle from './components/ForecastToggle';
+import Button from './components/Button';
 
 const App = () => {
   const [locationData, setLocationData] = useState([])
@@ -10,6 +11,7 @@ const App = () => {
   const [weatherData, setWeatherData] = useState([0])
 
   const addZipCode = async (zipCode) => {
+    // error handling if 5 digit ZIP is invalid
     try {
       const res = await fetch('https://api.zippopotam.us/us/' + zipCode)
       const data = await res.json()
@@ -51,13 +53,11 @@ const App = () => {
           />
         }
         {toggleInput &&
-          <CurrentWeather
-            weatherData={weatherData}
-          />
-        }
-        {toggleInput &&
-          <ForecastToggle />
-        }
+          <>
+            <CurrentWeather weatherData={weatherData} />
+            <Button onClick={() => setToggleInput(false)} text={'Enter new ZIP'} />
+          </>
+        } 
       </div>
     </div>
   );

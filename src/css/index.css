@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+/* ~~~~~~ general ~~~~~~ */
 *{
   margin: 0;
   padding: 0;
@@ -36,6 +37,8 @@ body{
   width: 428px;
   text-align: center;
 }
+
+/* ~~~~~~ header ~~~~~~ */
 .header{
   font-size: 42px;
   text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -43,35 +46,44 @@ body{
 .header-weather{
   font-size: 32px;
 }
-input{
-  border: 2px solid #FFFFFF;
-  border-radius: 5px;
-  background: transparent;
-  color: #FFFFFF;
-  width: 50%;
-  font-size: 14px;
-  padding: 5px;
-}
+
+/* ~~~~~~ inputs and buttons ~~~~~~ */
 input:focus{
   outline: none;
   border: 2px solid #FFFFFF;
 }
-input[type='submit']:hover, input:focus{
+input[type='submit']:hover, .btn:hover, input:focus{
   transition: 0.5s;
   box-shadow: 0px 2px 10px rgba(228,183,142,1);
 }
-.zip-input{
-  margin: 35px auto;
+input[type='submit']:hover, .btn:hover{
+  cursor: pointer;
 }
-::placeholder{
+.btn, .zip-input{
+  border: 2px solid #FFFFFF;
+  border-radius: 5px;
+  background: transparent;
   color: #FFFFFF;
+  padding: 5px;
+}
+.btn{
+  margin-top: 50px;
+}
+.zip-input{
+  width: 50%;
+  font-size: 14px;
+  margin: 35px auto;
 }
 .btn-submit{
   display: block;
   width: 100px;
-  cursor: pointer;
   margin: 0 auto;
 }
+::placeholder{
+  color: #FFFFFF;
+}
+
+/* ~~~~~~ current weather ~~~~~~ */
 .current-container{
   margin-top: 50px;
 }

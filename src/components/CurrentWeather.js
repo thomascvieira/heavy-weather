@@ -5,6 +5,7 @@ const CurrentWeather = ({weatherData}) => {
         let description = weatherData.current.weather[0].description
         let temperature = parseInt(weatherData.current.temp)
         let feelsLike = parseInt(weatherData.current.feels_like)
+        
         return (
             <div className='current-container'>
                 <div className="current-row row">
