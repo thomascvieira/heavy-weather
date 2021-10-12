@@ -3,7 +3,7 @@ const Header = ({ toggleInput, locationData }) => {
   toggleInput ? title = 'Weather for ' + locationData[0] : title = 'Heavy Weather'
   return (
     <header>
-      <h1 className="header">{title}</h1>
+      <h1 className={toggleInput ? `header header-weather` : `header`}>{title}</h1>
     </header>
   )
 }

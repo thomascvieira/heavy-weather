@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Header from "./components/Header";
 import ZipCodeInput from "./components/ZipCodeInput";
 import CurrentWeather from './components/CurrentWeather';
+import ForecastToggle from './components/ForecastToggle';
 
 const App = () => {
   const [locationData, setLocationData] = useState([])
@@ -53,6 +54,9 @@ const App = () => {
           <CurrentWeather
             weatherData={weatherData}
           />
+        }
+        {toggleInput &&
+          <ForecastToggle />
         }
       </div>
     </div>

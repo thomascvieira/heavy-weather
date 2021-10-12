@@ -5,7 +5,9 @@ const ZipCodeInput = ({ onAdd }) => {
 
     const onSubmit = (e) => {
         e.preventDefault()
-        if (!zipCode) {
+        const zipValidator = /(\d){5}/
+        const zipIsValid = zipValidator.test(zipCode)
+        if (!zipCode || !zipIsValid) {
             alert('Please enter a valid five digit ZIP code')
             return
         }
