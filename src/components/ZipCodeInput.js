@@ -6,7 +6,7 @@ const ZipCodeInput = ({ onAdd }) => {
     const onSubmit = (e) => {
         e.preventDefault()
         if (!zipCode) {
-            alert('Please enter a five digit ZIP code')
+            alert('Please enter a valid five digit ZIP code')
             return
         }
         onAdd(zipCode)

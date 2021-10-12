@@ -9,18 +9,24 @@ const App = () => {
   const [weatherData, setWeatherData] = useState([0])
 
   const addZipCode = async (zipCode) => {
-    const res = await fetch('https://api.zippopotam.us/us/' + zipCode)
-    const data = await res.json()
+    try {
+      const res = await fetch('https://api.zippopotam.us/us/' + zipCode)
+      const data = await res.json()
 
-    setToggleInput(true)
+      setToggleInput(true)
 
-    const lat = (data["places"]["0"]["latitude"])
-    const lon = (data["places"]["0"]["longitude"])
-    const loc = (data["places"]["0"]["place name"])
+      const lat = (data["places"]["0"]["latitude"])
+      const lon = (data["places"]["0"]["longitude"])
+      const loc = (data["places"]["0"]["place name"])
 
-    setLocationData([loc, lat, lon])
+      setLocationData([loc, lat, lon])
 
-    fetchWeatherData(lat, lon)
+      fetchWeatherData(lat, lon)
+    } catch (e) {
+      alert('Please enter a valid five digit ZIP code')
+      setToggleInput(false)
+      return
+    }
   }
 
   const fetchWeatherData = async (lat, lon) => {
@@ -43,8 +49,8 @@ const App = () => {
             toggleInput={toggleInput}
           />
         }
-        {toggleInput&&
-          <CurrentWeather 
+        {toggleInput &&
+          <CurrentWeather
             weatherData={weatherData}
           />
         }
