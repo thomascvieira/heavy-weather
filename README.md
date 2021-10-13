@@ -6,5 +6,5 @@ a simple weather application made with React version 17.0.2
 * [Erik Flowers' Weather Icons](https://erikflowers.github.io/weather-icons/)
 * Title and color palette inspired by [Weather Report's Heavy Weather](https://open.spotify.com/album/2M9F2yYsUvqiBPwUGeNvn1)
 ## contact me
-* [Portfolio](thomascvieira.com)
+* [Portfolio](https://thomascvieira.com/)
 * [LinkedIn](https://www.linkedin.com/in/thomascvieira/)
