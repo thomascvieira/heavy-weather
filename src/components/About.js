@@ -15,7 +15,7 @@ const About = () => {
                 <li>Portfolio: <a href="https://thomascvieira.com/" target="_blank" rel="noreferrer">thomascvieira.com</a></li>
                 <li>LinkedIn: <a href="https://www.linkedin.com/in/thomascvieira/" target="_blank" rel="noreferrer">thomascvieira</a></li>
             </ul>    
-            <Link to='/'>Go Back</Link>
+            <Link to='/heavy-weather'>Go Back</Link>
         </div>
     )
 }

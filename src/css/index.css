@@ -13,11 +13,10 @@ body{
   background: rgb(228,183,142);
   background: linear-gradient(0deg, rgba(228,183,142,1) 0%, rgba(119,135,166,1) 100%); 
   /* from https://cssgradient.io/ */
-
   box-shadow: inset 0 0 0 1000px rgba(0,0,0,.25);
   /* overlay to darken BG */
-
   min-height: 100vh;
+  position: relative;
 }
 .row{
 	display: flex;
@@ -33,14 +32,15 @@ body{
 }
 .container{
   margin: 0 auto;
-  min-height: 90vh;
-  padding-top: 50px;
   width: 700px;
   text-align: center;
+  overflow: auto;
+	padding-bottom: 50px;
 }
 
 /* ~~~~~~ header ~~~~~~ */
 .header{
+  padding-top: 50px;
   font-size: 42px;
   text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
@@ -85,6 +85,7 @@ input[type='submit']:hover, .btn:hover{
 }
 .btn-new-zip{
   margin-top: 50px;
+  margin-bottom: 25px;
 }
 .btn-forecast{
   border: none;
@@ -152,7 +153,7 @@ footer{
   padding: 5px;
   border-radius: 5px;
   width: 400px;
-  bottom: 50px;
+  bottom: 25px;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -193,9 +194,6 @@ footer a, .about-content a{
 @media screen and (max-width : 700px) {
   .container{
     width: 90%;
-  }
-  .date{
-    /* align-items: flex-end; */
   }
   .forecast-temp{
     font-size: 18px;

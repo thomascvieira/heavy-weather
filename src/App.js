@@ -57,7 +57,7 @@ const App = () => {
             toggleInput={toggleInput}
             locationData={locationData}
           />
-          <Route path='/' exact render={(props) => (
+          <Route path='/heavy-weather' exact render={(props) => (
             <>
               {!toggleInput &&
                 <ZipCodeInput
@@ -80,7 +80,7 @@ const App = () => {
             </>
           )}
           />
-          <Route path='/about' component={About} />
+          <Route path='/heavy-weather/about' component={About} />
           
         </div>
       </div>
