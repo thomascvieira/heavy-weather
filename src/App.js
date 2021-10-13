@@ -2,13 +2,20 @@ import { useState } from 'react'
 import Header from "./components/Header";
 import ZipCodeInput from "./components/ZipCodeInput";
 import CurrentWeather from './components/CurrentWeather';
-import ForecastToggle from './components/ForecastToggle';
 import Button from './components/Button';
+import Forecast from './components/Forecast';
 
 const App = () => {
   const [locationData, setLocationData] = useState([])
   const [toggleInput, setToggleInput] = useState(false)
   const [weatherData, setWeatherData] = useState([0])
+  const [forecastType, setForecastType] = useState('hourly')
+
+  // used for underlining selected forecast
+  let hourlyClassName = 'btn btn-forecast'
+  let dailyClassName = 'btn btn-forecast'
+  forecastType === 'hourly' ? hourlyClassName='btn btn-forecast btn-forecast-selected' : hourlyClassName='btn btn-forecast'
+  forecastType === 'daily' ? dailyClassName='btn btn-forecast btn-forecast-selected' : dailyClassName='btn btn-forecast'
 
   const addZipCode = async (zipCode) => {
     // error handling if 5 digit ZIP is invalid
@@ -55,7 +62,12 @@ const App = () => {
         {toggleInput &&
           <>
             <CurrentWeather weatherData={weatherData} />
-            <Button onClick={() => setToggleInput(false)} text={'Enter new ZIP'} />
+            <div>
+              <Button className={hourlyClassName} onClick={() => setForecastType('hourly')} text={'Hourly'}/>
+              <Button  className={dailyClassName} onClick={() => setForecastType('daily')} text={'Daily'}/>
+            </div>
+            <Forecast weatherData={weatherData} forecastType={forecastType}/>
+            <Button className={'btn btn-new-zip'} onClick={() => setToggleInput(false)} text={'Enter new ZIP'}/>
           </>
         } 
       </div>

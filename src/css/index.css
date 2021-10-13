@@ -67,7 +67,7 @@ input[type='submit']:hover, .btn:hover{
   padding: 5px;
 }
 .btn{
-  margin-top: 50px;
+  margin: 15px 5px;
 }
 .zip-input{
   width: 50%;
@@ -81,6 +81,15 @@ input[type='submit']:hover, .btn:hover{
 }
 ::placeholder{
   color: #FFFFFF;
+}
+.btn-new-zip{
+  margin-top: 50px;
+}
+.btn-forecast{
+  border: none;
+}
+.btn-forecast-selected{
+  text-decoration: underline;
 }
 
 /* ~~~~~~ current weather ~~~~~~ */
