@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/heavy-weather/static/css/main.587a6b8c.chunk.css",
+    "main.css": "/heavy-weather/static/css/main.22efea29.chunk.css",
     "main.js": "/heavy-weather/static/js/main.4f31bdae.chunk.js",
     "main.js.map": "/heavy-weather/static/js/main.4f31bdae.chunk.js.map",
     "runtime-main.js": "/heavy-weather/static/js/runtime-main.ce0eed3d.js",
@@ -10,14 +10,14 @@
     "static/js/3.a99e7520.chunk.js": "/heavy-weather/static/js/3.a99e7520.chunk.js",
     "static/js/3.a99e7520.chunk.js.map": "/heavy-weather/static/js/3.a99e7520.chunk.js.map",
     "index.html": "/heavy-weather/index.html",
-    "static/css/main.587a6b8c.chunk.css.map": "/heavy-weather/static/css/main.587a6b8c.chunk.css.map",
+    "static/css/main.22efea29.chunk.css.map": "/heavy-weather/static/css/main.22efea29.chunk.css.map",
     "static/js/2.2b57d9c7.chunk.js.LICENSE.txt": "/heavy-weather/static/js/2.2b57d9c7.chunk.js.LICENSE.txt",
     "static/media/weather-icons.min.css": "/heavy-weather/static/media/weathericons-regular-webfont.e218aee6.woff2"
   },
   "entrypoints": [
     "static/js/runtime-main.ce0eed3d.js",
     "static/js/2.2b57d9c7.chunk.js",
-    "static/css/main.587a6b8c.chunk.css",
+    "static/css/main.22efea29.chunk.css",
     "static/js/main.4f31bdae.chunk.js"
   ]
 }
