@@ -8,7 +8,7 @@ const Projection = ({time, temp, icon, description, rainChance}) => {
                 <div className='row projection-data'>
                     <p className='forecast-temp'>{temp}</p>
                     <i className={`wi wi-owm-${icon} projection-icon`}></i>
-                    <p className='forecast-desc'>{description}</p>
+                    {/* <p className='forecast-desc'>{description}</p> */}
                     {rainChance !== '0%' && <p className='rain-chance'><i className='wi wi-raindrops rain-chance-icon'></i>{rainChance}</p> }
                 </div>
             </div>
