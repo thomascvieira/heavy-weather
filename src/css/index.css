@@ -34,7 +34,7 @@ body{
 .container{
   margin: 0 auto;
   padding-top: 50px;
-  width: 428px;
+  width: 700px;
   text-align: center;
 }
 
@@ -96,10 +96,72 @@ input[type='submit']:hover, .btn:hover{
 .current-container{
   margin-top: 50px;
 }
+.current-header{
+  font-weight: normal;
+  margin-bottom: 15px;
+}
 .current-row{
   justify-content: space-evenly;
   align-items: baseline;
 }
 .current-temp, .current-icon{
   font-size: 48px;
+}
+
+/* ~~~~~~ forecast ~~~~~~ */
+.date{
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+.date p{
+  font-size: 18px;
+}
+.projections{
+  margin-left: 10px;
+}
+.projection{
+  margin: 20px 0px;
+}
+.projection-data{
+  align-items: center;
+}
+.projection-icon{
+  font-size: 32px;
+  margin: 0px 10px
+}
+.rain-chance-icon{
+  font-size: 22px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.forecast-temp{
+  font-size: 24px;
+}
+.rain-chance{
+  display: flex;
+  align-self: center;
+  margin-left: 10px;
+}
+
+@media screen and (max-width : 700px) {
+  .container{
+    width: 90%;
+  }
+  .date{
+    /* align-items: flex-end; */
+  }
+  .forecast-temp{
+    font-size: 18px;
+  }
+  .projection-icon{
+    font-size: 28px;
+  }
+  .forecast-desc{
+    font-size: 12px;
+  }
+  .rain-chance{
+    font-size: 14px;
+  }
 }

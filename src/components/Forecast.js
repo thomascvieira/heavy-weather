@@ -11,7 +11,10 @@ const Forecast = ({ weatherData, forecastType }) => {
                     (<Projection
                         key={projection.dt}
                         time={Intl.DateTimeFormat('en-US', { hour: 'numeric', hour12: 'true' }).format(projection.dt * 1000)}
-                        temp={projection.temp}
+                        temp={parseInt(projection.temp)+'°F'}
+                        icon={projection.weather[0].id}
+                        description={projection.weather[0].description}
+                        rainChance={(projection.pop*100)+'%'}
                     />)
                     )}
                 </>
@@ -24,8 +27,12 @@ const Forecast = ({ weatherData, forecastType }) => {
                     {data.map((projection) => 
                     (<Projection 
                         key={projection.dt} 
-                        time={Intl.DateTimeFormat('en-US', { weekday: 'short', day: 'numeric'}).format(projection.dt * 1000)} 
-                        temp={projection.temp.day} />)
+                        time={Intl.DateTimeFormat('en-US', { weekday: 'short', month: 'numeric', day: 'numeric'}).format(projection.dt * 1000)} 
+                        temp={parseInt(projection.temp.day)+'°F'}
+                        icon={projection.weather[0].id}
+                        description={projection.weather[0].description}
+                        rainChance={(projection.pop*100)+'%'}
+                    />)
                     )}
                 </>
             )
