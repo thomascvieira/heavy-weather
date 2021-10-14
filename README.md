@@ -1,4 +1,4 @@
-# Heavy Weather
+# [Heavy Weather](https://thomascvieira.github.io/heavy-weather/)
 a simple weather application made with React version 17.0.2
 ## try it out [here](https://thomascvieira.github.io/heavy-weather/)
 ## resources used
