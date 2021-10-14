@@ -14,7 +14,7 @@ const Forecast = ({ weatherData, forecastType }) => {
                         temp={parseInt(projection.temp)+'°F'}
                         icon={projection.weather[0].id}
                         description={projection.weather[0].description}
-                        rainChance={(projection.pop*100)+'%'}
+                        rainChance={parseInt(projection.pop*100)+'%'}
                     />)
                     )}
                 </>
@@ -31,7 +31,7 @@ const Forecast = ({ weatherData, forecastType }) => {
                         temp={parseInt(projection.temp.day)+'°F'}
                         icon={projection.weather[0].id}
                         description={projection.weather[0].description}
-                        rainChance={(projection.pop*100)+'%'}
+                        rainChance={parseInt(projection.pop*100)+'%'}
                     />)
                     )}
                 </>
