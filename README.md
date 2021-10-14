@@ -1,5 +1,6 @@
 # Heavy Weather
 a simple weather application made with React version 17.0.2
+## try it out [here](https://thomascvieira.github.io/heavy-weather/)
 ## resources used
 * [Zippopotam.us](https://www.zippopotam.us/) for location data
 * [OpenWeatherMap.org's One Call API](https://openweathermap.org/api/one-call-api) for weather data
