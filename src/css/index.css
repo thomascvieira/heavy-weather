@@ -211,3 +211,8 @@ footer a, .about-content a{
     font-size: 14px;
   }
 }
+@media screen and (max-width : 400px){
+  footer{
+    width: 95%;
+  }
+}
